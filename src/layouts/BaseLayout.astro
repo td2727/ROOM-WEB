@@ -1,0 +1,72 @@
+---
+const {
+  title = "ROM",
+  description = "Radiografía y tomografía odontológica maxilofacial.",
+  ogImage = "/images/og.jpg", // opcional: cambia o elimina si no lo tienes
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+
+    <title>{title}</title>
+
+    <!-- Favicon (opcional) -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Open Graph (WhatsApp/Facebook) -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={ogImage} />
+
+    <!-- Básico para que se vea mejor en algunos móviles -->
+    <meta name="theme-color" content="#0b0b0c" />
+
+    <style>
+      :root{
+        --bg:#0b0b0c;
+        --text:#ffffff;
+        --muted:#cfcfcf;
+        --accent:#ff6a00;
+        --max:1100px;
+      }
+
+      *{ box-sizing:border-box; }
+
+      html, body{
+        margin:0;
+        padding:0;
+        width:100%;
+        height:100%;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        background:#fff;
+        color:#111;
+      }
+
+      /* Evita que el móvil “haga zoom raro” en textos */
+      body{
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+      }
+
+      img{ max-width:100%; display:block; }
+
+      a{ color:inherit; }
+
+      /* Por si algún componente deja márgenes raros */
+      h1,h2,h3,p{ margin:0; }
+
+      /* Si quieres scroll suave al hacer click en #services */
+      html{ scroll-behavior:smooth; }
+    </style>
+  </head>
+
+  <body>
+    <slot />
+  </body>
+</html>

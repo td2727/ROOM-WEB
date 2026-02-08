@@ -141,8 +141,14 @@
     line-height: 1.75;
   }
 
-  @media (max-width: 700px){
-    h1{ font-size: 62px; }
-    h2{ font-size: 16px; }
-  }
+  @media (max-width: 480px){
+  .hero{ padding: 44px 0 38px; }   /* menos aire */
+  .wrap{ max-width: 100%; padding: 0 16px; } /* ocupa más pantalla */
+  h1{ font-size: 52px; letter-spacing: 1px; }
+  h2{ font-size: 15px; }
+  p{ font-size: 13px; line-height: 1.65; }
+  .social{ gap: 10px; margin: 14px 0 18px; }
+  .ico{ width: 30px; height: 30px; }
+  .ico svg{ width: 15px; height: 15px; }
+}
 </style>

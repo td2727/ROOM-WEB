@@ -79,8 +79,11 @@
     .card{ height:330px; }
   }
 
-  @media (max-width:560px){
-    h2{ font-size:34px; }
-    .grid{ grid-template-columns:1fr; }
-  }
+ @media (max-width: 480px){
+  .services{ padding: 44px 16px 60px; }
+  h2{ font-size: 34px; margin: 0 0 22px; }
+  .grid{ gap: 14px; }
+  .card{ height: 240px; } /* antes 310, en móvil se siente “lejos” */
+}
+
 </style>
